@@ -3,104 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Ficha interactiva del Ferrari 499P, prototipo Hypercar de Ferrari en el FIA WEC.">
-<title>Ferrari 499P | NFC</title>
+<title>Ferrari 499P</title>
 <style>
-:root{--red:#d40000;--dark:#080808;--panel:#151515;--muted:#aaa;--gold:#d9b35a}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--dark);color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-a{color:inherit}.nav{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.92);backdrop-filter:blur(10px);border-bottom:1px solid #292929;padding:14px 5%;display:flex;gap:18px;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:2px}.links{display:flex;gap:14px;flex-wrap:wrap}.links a{text-decoration:none;color:#ccc;font-size:.9rem}.links a:hover{color:white}
-.hero{min-height:78vh;padding:90px 7%;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 40%,#3b0000 0,#130000 28%,#080808 65%)}.hero:after{content:"499P";position:absolute;font-size:24vw;font-weight:900;color:rgba(255,255,255,.025);right:-2vw;bottom:-4vw}.hero-inner{max-width:1100px;width:100%;position:relative;z-index:1}.eyebrow{color:#ff4545;font-weight:800;letter-spacing:4px;text-transform:uppercase}.hero h1{font-size:clamp(4rem,11vw,9rem);line-height:.8;margin:20px 0}.hero p{max-width:650px;color:#cfcfcf;font-size:1.15rem}.btn{display:inline-block;background:var(--red);padding:12px 20px;text-decoration:none;font-weight:800;border-radius:4px;margin-top:18px}.section{max-width:1100px;margin:auto;padding:80px 6%}.section h2{font-size:clamp(2rem,5vw,3.5rem);margin:0 0 25px}.kicker{color:#ff4545;text-transform:uppercase;font-size:.8rem;font-weight:800;letter-spacing:3px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:var(--panel);border:1px solid #292929;border-radius:12px;padding:22px}.stat{font-size:1.7rem;font-weight:800}.muted{color:var(--muted)}.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:#333;border:1px solid #333}.spec{background:#101010;padding:18px}.spec b{display:block;color:#aaa;font-size:.8rem;text-transform:uppercase}.timeline{border-left:2px solid var(--red);padding-left:24px}.event{margin:0 0 28px}.year{color:#ff4545;font-weight:900;font-size:1.2rem}.drivers .card{position:relative}.number{font-size:2.7rem;font-weight:900;color:var(--gold);float:right}.quote{border-left:3px solid var(--gold);padding:18px 22px;background:#111;color:#ddd}.footer{border-top:1px solid #292929;padding:35px 6%;color:#888;font-size:.85rem}.source a{color:#ddd}.warning{font-size:.8rem;color:#999}
-@media(max-width:700px){.nav{align-items:flex-start;flex-direction:column}.hero{min-height:70vh}.links{gap:8px}.links a{font-size:.78rem}}
+:root{--red:#d40000;--black:#080808;--dark:#111;--gray:#aaa;--gold:#d7b45a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit}
+nav{position:sticky;top:0;z-index:20;background:rgba(8,8,8,.94);backdrop-filter:blur(10px);border-bottom:1px solid #292929;padding:14px 5%;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;letter-spacing:2px}.navlinks{display:flex;gap:18px}.navlinks a{text-decoration:none;color:#ccc;font-size:.88rem}.navlinks a:hover{color:#fff}
+.hero{min-height:88vh;display:flex;align-items:end;padding:8vh 7%;position:relative;overflow:hidden;background:linear-gradient(115deg,#080808 20%,#220000 60%,#080808)}.hero:before{content:"499P";position:absolute;right:-2vw;bottom:-7vw;font-size:30vw;font-weight:900;color:rgba(255,255,255,.035)}.hero-content{position:relative;z-index:2;max-width:950px}.eyebrow{color:#ff3b3b;font-size:.85rem;font-weight:900;letter-spacing:4px}.hero h1{font-size:clamp(5rem,15vw,12rem);line-height:.8;margin:22px 0}.hero h2{font-size:clamp(1.2rem,3vw,2rem);font-weight:400;margin:0}.hero p{max-width:650px;color:#ccc;font-size:1.05rem}.btn{display:inline-block;background:var(--red);padding:12px 20px;text-decoration:none;font-weight:800;margin-top:15px;border-radius:3px}
+section{max-width:1150px;margin:auto;padding:85px 6%}.tag{color:#ff3b3b;font-size:.78rem;font-weight:900;letter-spacing:3px}.title{font-size:clamp(2.2rem,5vw,4rem);margin:8px 0 28px;line-height:1}.intro{max-width:800px;color:#ccc;font-size:1.08rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:var(--dark);border:1px solid #292929;border-radius:12px;padding:23px}.card h3{margin-top:0}.big{font-size:2rem;font-weight:900}.muted{color:var(--gray)}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:#333;border:1px solid #333}.spec{background:#101010;padding:19px}.spec b{display:block;color:#888;text-transform:uppercase;font-size:.73rem;letter-spacing:1px;margin-bottom:4px}
+.winner{border:1px solid #55461e;background:linear-gradient(135deg,#14110a,#111);position:relative;overflow:hidden}.winner .num{position:absolute;right:18px;top:0;font-size:7rem;font-weight:900;color:rgba(215,180,90,.12)}
+.drivers .card{min-height:180px}.number{color:var(--gold);font-size:2.4rem;font-weight:900}.timeline{border-left:2px solid var(--red);padding-left:25px}.event{margin-bottom:32px}.year{color:#ff3b3b;font-weight:900;font-size:1.4rem}
+.tech{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.tech .card{min-height:180px}.bar{height:5px;background:#2a2a2a;margin-top:18px}.bar span{display:block;height:100%;background:var(--red)}
+footer{border-top:1px solid #292929;padding:35px 6%;color:#888;font-size:.82rem}
+@media(max-width:700px){nav{flex-direction:column;gap:10px;align-items:flex-start}.navlinks{gap:10px;flex-wrap:wrap}.hero{min-height:78vh}.hero h1{font-size:5.5rem}section{padding:65px 6%}}
 </style>
 </head>
 <body>
-<nav class="nav">
-  <div class="brand">FERRARI 499P</div>
-  <div class="links">
-    <a href="#about">499P</a><a href="#specs">Datos</a><a href="#le-mans">Le Mans</a><a href="#drivers">Pilotos</a><a href="#evolution">Evolución</a>
-  </div>
-</nav>
+<nav><div class="logo">FERRARI 499P</div><div class="navlinks"><a href="#about">499P</a><a href="#specs">Técnica</a><a href="#lemans">Le Mans</a><a href="#cars">Autos</a><a href="#evolution">Evolución</a></div></nav>
 
-<header class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">Le Mans Hypercar · FIA WEC</div>
-    <h1>499P</h1>
-    <p>El prototipo con el que Ferrari regresó a la categoría máxima del FIA World Endurance Championship en 2023, y que ganó Le Mans en su debut.</p>
-    <a class="btn" href="#about">EXPLORAR ↓</a>
-  </div>
-</header>
+<header class="hero"><div class="hero-content"><div class="eyebrow">LE MANS HYPERCAR · FIA WEC</div><h1>499P</h1><h2>El regreso de Ferrari a la cima de la resistencia.</h2><p>Un prototipo híbrido creado para competir en la categoría máxima del FIA World Endurance Championship.</p><a class="btn" href="#about">EXPLORAR</a></div></header>
 
-<section class="section" id="about">
-  <div class="kicker">01 · El automóvil</div>
-  <h2>Una vuelta a la cima.</h2>
-  <p>El Ferrari 499P es un prototipo Le Mans Hypercar desarrollado para competir en la clase máxima del FIA WEC. Su nombre recupera la tradición de Ferrari de utilizar la letra P para sus prototipos deportivos.</p>
-  <div class="grid">
-    <div class="card"><div class="stat">2023</div><div class="muted">Debut en el FIA WEC</div></div>
-    <div class="card"><div class="stat">LMH</div><div class="muted">Le Mans Hypercar</div></div>
-    <div class="card"><div class="stat">#51</div><div class="muted">Ganador de Le Mans 2023</div></div>
-    <div class="card"><div class="stat">50 años</div><div class="muted">Ausencia de Ferrari en la máxima categoría antes del regreso</div></div>
-  </div>
-</section>
+<section id="about"><div class="tag">01 · EL AUTOMÓVIL</div><h2 class="title">Nacido para las 24 horas.</h2><p class="intro">El Ferrari 499P debutó en el FIA WEC en 2023. Con él, Ferrari regresó a la categoría máxima del Campeonato Mundial de Resistencia después de décadas de ausencia.</p><div class="grid">
+<div class="card"><div class="big">2023</div><div class="muted">Debut competitivo</div></div><div class="card"><div class="big">LMH</div><div class="muted">Le Mans Hypercar</div></div><div class="card"><div class="big">#51</div><div class="muted">Ganador de Le Mans 2023</div></div><div class="card"><div class="big">V6</div><div class="muted">Motor biturbo a 120°</div></div></div></section>
 
-<section class="section" id="specs">
-  <div class="kicker">02 · Ficha técnica</div>
-  <h2>Ingeniería de resistencia.</h2>
-  <div class="specs">
-    <div class="spec"><b>Motor</b>V6 biturbo</div>
-    <div class="spec"><b>Cilindrada</b>2.992 cc aprox.</div>
-    <div class="spec"><b>Arquitectura</b>V6 a 120°</div>
-    <div class="spec"><b>Híbrido</b>ERS + motor eléctrico delantero</div>
-    <div class="spec"><b>ERS</b>Hasta 200 kW bajo reglamento</div>
-    <div class="spec"><b>Transmisión</b>Secuencial de 7 velocidades</div>
-    <div class="spec"><b>Tracción</b>Integral en configuración híbrida</div>
-    <div class="spec"><b>Chasis</b>Monocasco de fibra de carbono</div>
-  </div>
-  <p class="warning">Nota: en competición, la potencia y otros parámetros están condicionados por el reglamento y el Balance of Performance (BoP). Esta ficha evita mezclar cifras de homologación con las de la versión 499P Modificata.</p>
-</section>
+<section id="specs"><div class="tag">02 · INGENIERÍA</div><h2 class="title">Ficha técnica.</h2><div class="specs">
+<div class="spec"><b>Motor</b>V6 biturbo</div><div class="spec"><b>Cilindrada</b>2.992 cm³ aprox.</div><div class="spec"><b>Arquitectura</b>V6 a 120°</div><div class="spec"><b>Sistema híbrido</b>ERS + motor eléctrico delantero</div><div class="spec"><b>Potencia ERS</b>Hasta 200 kW bajo reglamento</div><div class="spec"><b>Transmisión</b>Secuencial de 7 velocidades</div><div class="spec"><b>Tracción</b>Integral con sistema híbrido</div><div class="spec"><b>Chasis</b>Monocasco de fibra de carbono</div></div></section>
 
-<section class="section" id="le-mans">
-  <div class="kicker">03 · 24 Horas de Le Mans</div>
-  <h2>2023 · La noche que volvió Ferrari.</h2>
-  <div class="grid">
-    <div class="card"><div class="number">#51</div><h3>Ferrari AF Corse</h3><p>Alessandro Pier Guidi<br>James Calado<br>Antonio Giovinazzi</p></div>
-    <div class="card"><div class="stat">🥇 1.º</div><p class="muted">Victoria absoluta en la edición centenaria de las 24 Horas de Le Mans.</p></div>
-    <div class="card"><div class="stat">342</div><p class="muted">Vueltas completadas por el #51.</p></div>
-  </div>
-  <p class="quote">Ferrari regresó a la clase superior y consiguió la victoria absoluta con el 499P #51 en su primera participación en Le Mans.</p>
-</section>
+<section id="lemans"><div class="tag">03 · LE MANS</div><h2 class="title">2023 · Victoria en el regreso.</h2><div class="winner card"><div class="num">51</div><h3>Ferrari AF Corse #51</h3><p>Alessandro Pier Guidi · James Calado · Antonio Giovinazzi</p><div class="big">🥇 1.º ABSOLUTO</div><p class="muted">24 Horas de Le Mans 2023 · 342 vueltas</p></div><div class="grid" style="margin-top:16px"><div class="card"><div class="big">2024</div><div class="muted">Victoria de Ferrari en Le Mans con el #50</div></div><div class="card"><div class="big">2025</div><div class="muted">Tercera victoria consecutiva de Ferrari en Le Mans</div></div></div></section>
 
-<section class="section" id="drivers">
-  <div class="kicker">04 · Las tripulaciones 2026</div>
-  <h2>Tres 499P en el WEC.</h2>
-  <div class="grid drivers">
-    <div class="card"><div class="number">#50</div><h3>Ferrari AF Corse</h3><p>Antonio Fuoco<br>Miguel Molina<br>Nicklas Nielsen</p></div>
-    <div class="card"><div class="number">#51</div><h3>Ferrari AF Corse</h3><p>Alessandro Pier Guidi<br>James Calado<br>Antonio Giovinazzi</p></div>
-    <div class="card"><div class="number">#83</div><h3>AF Corse</h3><p>Yifei Ye<br>Robert Kubica<br>Philip Hanson</p></div>
-  </div>
-</section>
+<section id="cars"><div class="tag">04 · LOS 499P</div><h2 class="title">Tres autos, una familia.</h2><div class="grid drivers">
+<div class="card"><div class="number">#50</div><h3>Ferrari AF Corse</h3><p>Antonio Fuoco<br>Miguel Molina<br>Nicklas Nielsen</p></div><div class="card"><div class="number">#51</div><h3>Ferrari AF Corse</h3><p>Alessandro Pier Guidi<br>James Calado<br>Antonio Giovinazzi</p></div><div class="card"><div class="number">#83</div><h3>AF Corse</h3><p>Yifei Ye<br>Robert Kubica<br>Philip Hanson</p></div></div></section>
 
-<section class="section" id="evolution">
-  <div class="kicker">05 · Evolución</div>
-  <h2>De debut histórico a referente.</h2>
-  <div class="timeline">
-    <div class="event"><div class="year">2023</div><p>Debut del 499P en el FIA WEC. El #51 gana las 24 Horas de Le Mans en el regreso de Ferrari a la categoría máxima.</p></div>
-    <div class="event"><div class="year">2024</div><p>El #50 consigue la segunda victoria consecutiva de Ferrari en Le Mans.</p></div>
-    <div class="event"><div class="year">2025</div><p>Ferrari logra una tercera victoria consecutiva en Le Mans y los títulos de Constructores y Pilotos del WEC.</p></div>
-    <div class="event"><div class="year">2026</div><p>Ferrari continúa con los #50 y #51 oficiales y el #83 de AF Corse. La historia sigue escribiéndose, porque al parecer tres años de éxito no eran suficientes drama.</p></div>
-  </div>
-</section>
+<section><div class="tag">05 · TECNOLOGÍA</div><h2 class="title">El corazón híbrido.</h2><div class="tech">
+<div class="card"><h3>V6 biturbo</h3><p class="muted">Motor de combustión desarrollado para entregar rendimiento sostenido durante largas distancias.</p><div class="bar"><span style="width:88%"></span></div></div>
+<div class="card"><h3>ERS</h3><p class="muted">El sistema de recuperación de energía alimenta el sistema híbrido y permite aprovechar energía durante la vuelta.</p><div class="bar"><span style="width:72%"></span></div></div>
+<div class="card"><h3>Motor delantero</h3><p class="muted">El sistema eléctrico se integra en el eje delantero dentro de la arquitectura híbrida del 499P.</p><div class="bar"><span style="width:78%"></span></div></div>
+<div class="card"><h3>Aerodinámica</h3><p class="muted">La carrocería está diseñada para generar carga aerodinámica manteniendo eficiencia en rectas largas.</p><div class="bar"><span style="width:82%"></span></div></div></div></section>
 
-<section class="section">
-  <div class="kicker">06 · Para tu tarjeta NFC</div>
-  <h2>Un toque y aparece el 499P.</h2>
-  <p>Graba en la tarjeta NFC la URL pública de esta página. El chip no necesita almacenar la ficha completa: solo guarda el enlace. Así podrás actualizar la página sin reprogramar la tarjeta.</p>
-  <div class="card"><b>URL sugerida</b><br><code>https://TU-DOMINIO/ferrari499p</code><br><span class="muted">Sustituye esta dirección por la URL que uses al publicar el sitio.</span></div>
-</section>
+<section id="evolution"><div class="tag">06 · EVOLUCIÓN</div><h2 class="title">2023 → 2026.</h2><div class="timeline">
+<div class="event"><div class="year">2023</div><p>Debut del 499P en el WEC y victoria absoluta en las 24 Horas de Le Mans con el #51.</p></div>
+<div class="event"><div class="year">2024</div><p>Ferrari vuelve a ganar Le Mans con el #50.</p></div>
+<div class="event"><div class="year">2025</div><p>Ferrari consigue una tercera victoria consecutiva en Le Mans y los títulos de Constructores y Pilotos del WEC.</p></div>
+<div class="event"><div class="year">2026</div><p>El programa continúa con los Ferrari oficiales #50 y #51 y el #83 de AF Corse.</p></div></div></section>
 
-<footer class="footer">
-  <p><b>Ferrari 499P · Proyecto NFC</b></p>
-  <p>Datos principales contrastados con Ferrari y FIA WEC. Las marcas y nombres pertenecen a sus respectivos propietarios.</p>
-  <p class="source">Fuentes: <a href="https://www.ferrari.com/" target="_blank" rel="noopener">Ferrari</a> · <a href="https://www.fiawec.com/" target="_blank" rel="noopener">FIA WEC</a></p>
-</footer>
+<section><div class="tag">07 · NFC</div><h2 class="title">Un toque.</h2><p class="intro">La tarjeta NFC puede almacenar la dirección de esta página. Al acercar un teléfono compatible, se abre directamente la ficha del Ferrari 499P.</p></section>
+
+<footer>Ferrari 499P · Proyecto NFC<br>Información resumida basada en datos de Ferrari y FIA WEC.</footer>
 </body>
 </html>
